@@ -8,7 +8,7 @@ async function bootstrap() {
   app.setGlobalPrefix('api/v2');
 
   const configService = app.get(ConfigService);
-  const port = configService.get<number>('port')!;
+  const port = configService.get<number>('PORT')!;
 
   app.useGlobalPipes(
     new ValidationPipe({
@@ -21,5 +21,6 @@ async function bootstrap() {
     }),
   );
   await app.listen(port);
+  console.log(`The app running in port: ${port}`);
 }
 bootstrap();

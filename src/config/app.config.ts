@@ -1,6 +1,6 @@
-export const EnvConfiguration = ()=> ({
-    environment: process.env.NODE_ENV || 'dev',
-    mongodb: process.env.MONGODB,
-    port: process.env.PORT || 3000,
-    limit: process.env.LIMIT || 7,
-})
+export const EnvConfiguration = () => ({
+  ENVIRONMENT: process.env.NODE_ENV || 'dev',
+  MONGODB: process.env.MONGODB,
+  PORT: Number(process.env.PORT) || 3000,
+  LIMIT: Number(process.env.LIMIT) || 7,
+});

@@ -24,7 +24,7 @@ export class PokemonService {
     private readonly pokemonModel: Model<Pokemon>,
     private readonly configService: ConfigService,
   ) {
-    this.limit = this.configService.get<number>('limit')!;
+    this.limit = this.configService.get<number>('LIMIT')!;
   }
 
   async create(createPokemonDto: CreatePokemonDto) {
