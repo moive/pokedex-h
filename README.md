@@ -22,6 +22,8 @@ Rebuild the database using the seed
 localhost:3000/api/v2/seed
 ```
 
+Rename file **.env.template** to **.env**
+
 ## Compile and run the project
 
 ```bash
