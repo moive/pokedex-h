@@ -18,11 +18,11 @@ import { PaginationDto } from 'src/common/dto/pagination.dto';
 
 @Injectable()
 export class PokemonService {
-  private limit:number;
+  private limit: number;
   constructor(
     @InjectModel(Pokemon.name)
     private readonly pokemonModel: Model<Pokemon>,
-    private readonly configService: ConfigService
+    private readonly configService: ConfigService,
   ) {
     this.limit = this.configService.get<number>('limit')!;
   }

@@ -12,7 +12,7 @@ import { EnvConfiguration } from './config/app.config';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      load: [EnvConfiguration]
+      load: [EnvConfiguration],
     }),
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
@@ -24,5 +24,5 @@ import { EnvConfiguration } from './config/app.config';
   ],
 })
 export class AppModule {
-  constructor(){}
+  constructor() {}
 }
